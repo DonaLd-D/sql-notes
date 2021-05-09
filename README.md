@@ -36,3 +36,12 @@
 > 多表内连接、左连接、右连接的写法
 #### 子查询
 > 子查询不同场景下的应用
+
+# sql写入操作
+
+#### insert语句
+> 利用sql语法insert into实现数据插入
+#### update语句
+> 利用sql语法update实现数据更新
+#### delete语句
+> 利用sql语法delete实现数据删除
