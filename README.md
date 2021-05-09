@@ -45,3 +45,12 @@
 > 利用sql语法update实现数据更新
 #### delete语句
 > 利用sql语法delete实现数据删除
+
+# sql基本函数
+
+#### mysql数字函数
+> format、abs、mod
+#### mysql字符函数
+> upper、lower、char_length
+#### 日期与条件函数
+> now、date_format
