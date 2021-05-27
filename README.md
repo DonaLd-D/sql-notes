@@ -58,59 +58,59 @@
 # 数据库表的基本操作
 
 #### sql语句注意事项
-> sql语句不区分大小写，但是字符串区分大小写
-> sql语句必须以分号结尾
-> sql语句中的空白和换行没有限制，但是不能破坏语法
+> sql语句不区分大小写，但是字符串区分大小写  
+> sql语句必须以分号结尾  
+> sql语句中的空白和换行没有限制，但是不能破坏语法  
 #### 创建逻辑库
-> mysql > CREATE DATABASE 逻辑库名称;
-> mysql > SHOW DATABASES;
-> mysql > DROP DATABASE 逻辑库名称;
+> mysql > CREATE DATABASE 逻辑库名称;  
+> mysql > SHOW DATABASES;  
+> mysql > DROP DATABASE 逻辑库名称;  
 #### 创建数据表
-> CREATE TABLE 数据表（
->   列名1 数据类型[约束][COMMENT 注释],
->   列名2 数据类型[约束][COMMENT 注释],
->   ······
-> ）[COMMENT=注释];
-> DROP TABLE 数据表;
+> CREATE TABLE 数据表（  
+>   列名1 数据类型[约束][COMMENT 注释],  
+>   列名2 数据类型[约束][COMMENT 注释],  
+>   ······  
+> ）[COMMENT=注释];  
+> DROP TABLE 数据表;  
 #### 数据表的其他操作
-> SHOW table;
-> DESC student;
-> SHOW CREATE TABLE student;
-> DROP TABLE student;
+> SHOW table;  
+> DESC student;  
+> SHOW CREATE TABLE student;  
+> DROP TABLE student;  
 #### 添加字段
-> ALTER TABLE 表名称
-> ADD 列1 数据类型[约束][COMMENT 注释],
-> ADD 列1 数据类型[约束][COMMENT 注释],
-> ······;
+> ALTER TABLE 表名称  
+> ADD 列1 数据类型[约束][COMMENT 注释],  
+> ADD 列1 数据类型[约束][COMMENT 注释],  
+> ······;  
 #### 修改字段类型和约束
-> ALTER TABLE 表名称
-> MODIFY 列1 数据类型[约束][COMMENT 注释],
-> MODIFY 列2 数据类型[约束][COMMENT 注释],
-> ······;
+> ALTER TABLE 表名称  
+> MODIFY 列1 数据类型[约束][COMMENT 注释],  
+> MODIFY 列2 数据类型[约束][COMMENT 注释],  
+> ······;  
 #### 修改字段名称
-> ALTER TABLE 表名称
-> CHANGE 列1 新列名1 数据类型[约束][COMMENT 注释],
-> CHANGE 列2 新列名2 数据类型[约束][COMMENT 注释],
-> ······;
+> ALTER TABLE 表名称  
+> CHANGE 列1 新列名1 数据类型[约束][COMMENT 注释],  
+> CHANGE 列2 新列名2 数据类型[约束][COMMENT 注释],  
+> ······;  
 #### 删除字段
-> ALTER TABLE 表名称
-> DROP 列1,
-> DROP 列2,
-> ······;
+> ALTER TABLE 表名称  
+> DROP 列1,  
+> DROP 列2,  
+> ······;  
 #### 修改表名
-> ALTER TABLE 表名 RENAME 新表名;
+> ALTER TABLE 表名 RENAME 新表名;  
 #### 如何创建索引
-> CREATE TABLE 表名称（
->   ······,
->   INDEX[索引名称](字段)
->   ······
-> ）;
+> CREATE TABLE 表名称（  
+>   ······,  
+>   INDEX[索引名称](字段)  
+>   ······  
+> ）;  
 #### 如何添加与删除索引
-> CREATE INDEX 索引名称 ON 表名(字段);
-> ALTER TABLE 表名称 ADD INDEX [索引名](字段);
-> SHOW INDEX FROM 表名;
-> DROP INDEX 索引名称 ON 表名;
+> CREATE INDEX 索引名称 ON 表名(字段);  
+> ALTER TABLE 表名称 ADD INDEX [索引名](字段);  
+> SHOW INDEX FROM 表名;  
+> DROP INDEX 索引名称 ON 表名;  
 #### 索引的使用原则
-> 数据量很大，而且经常被查询的数据表可以设置索引
-> 索引只添加在经常被用作检索条件的字段上面
-> 不要在大字段上创建索引
+> 数据量很大，而且经常被查询的数据表可以设置索引  
+> 索引只添加在经常被用作检索条件的字段上面  
+> 不要在大字段上创建索引  
