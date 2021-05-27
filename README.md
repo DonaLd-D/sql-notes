@@ -114,3 +114,43 @@
 > 数据量很大，而且经常被查询的数据表可以设置索引  
 > 索引只添加在经常被用作检索条件的字段上面  
 > 不要在大字段上创建索引  
+
+# 数据库的基本查询
+#### 记录查询
+> 最基本的查询语句是由SELECT和FROM关键字组成的  
+> ```
+> SELECT * FROM t_student;  
+> SELECT id,name,sex FROM t_student;  
+> ```
+#### 使用列别名
+> 通常情况下，SELECT子句中使用了表达式，那么这列的名字就默认为表达式，因此需要一种对列名重命名的机制  
+> ```
+> SELECT  
+>   ename,  
+>   sal *12 AS "annual_salary"  
+> FROM  
+>   emp;  
+> ```
+#### 数据分页
+> 如果结果集的记录很多，则可以使用LIMIT关键字限定结果集数量。  
+> ```
+> SELECT ······FROM ······LIMIT起始位置，偏移量；
+> SELECT empno,ename FROM t_emp LIMIT 0,20;
+> ```
+#### 结果集排序
+>```
+>SELECT ··· FROM ··· ORDER BY 别名 [ASC|DESC];
+>SELECT ename,sal FROM t_emp ORDER BY sal;
+>```
+#### 去除重复记录
+> 如果需要去除重复的数据，可以使用DISTINCT关键字来实现
+> SELECT DISTINCT 字段 FROM ···;
+> ```
+> SELECT DISTINCT job FROM t_emp;
+> ```
+#### 条件查询
+> SELECT ... FROM ... WHERE 条件 [AND|OR]条件...;
+> ```
+> SELECT empno,ename,sal FROM t_emp  
+> WHERE deptno=10 AND sal>=2000;  
+> ```
