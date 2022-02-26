@@ -69,68 +69,61 @@
 
 ## 函数
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+### `avg()`
+##### AVG() 函数返回数值列的平均值
+- SELECT AVG(column_name) FROM table_name
+
+### `count()`
+##### COUNT() 函数返回匹配指定条件的行数
+- SELECT COUNT(column_name) FROM table_name;
+
+### `max()`
+##### MAX() 函数返回指定列的最大值
+- SELECT MAX(column_name) FROM table_name;
+
+### `min()`
+##### MIN() 函数返回指定列的最小值
+- SELECT MIN(column_name) FROM table_name;
+
+### `sum()`
+##### SUM() 函数返回数值列的总数
+- SELECT SUM(column_name) FROM table_name;
+
+### `group by`
+##### GROUP BY 语句可结合一些聚合函数来使用
+- SELECT column_name, aggregate_function(column_name) FROM table_name WHERE column_name operator value GROUP BY column_name;
+
+### `having`
+##### 在 SQL 中增加 HAVING 子句原因是，WHERE 关键字无法与聚合函数一起使用。
+
+### `exists`
+##### EXISTS 运算符用于判断查询子句是否有记录，如果有一条或多条记录存在返回 True，否则返回 False。
+- SELECT column_name(s) FROM table_name WHERE EXISTS (SELECT column_name FROM table_name WHERE condition);
+
+### `ucase()`
+##### UCASE() 函数把字段的值转换为大写。
+- SELECT UCASE(column_name) FROM table_name;
+
+### `lcase()`
+##### LCASE() 函数把字段的值转换为小写。
+- SELECT LCASE(column_name) FROM table_name;
+
+### `mid()`
+##### MID() 函数用于从文本字段中提取字符
+- SELECT MID(column_name,start,length) FROM table_name;
+
+### `len()`
+##### LEN() 函数返回文本字段中值的长度
+- SELECT LEN(column_name) FROM table_name;
+
+### `round()`
+##### ROUND() 函数用于把数值字段舍入为指定的小数位数
+- SELECT ROUND(column_name,decimals) FROM TABLE_NAME;
+
+### `now()`
+##### NOW() 函数返回当前系统的日期和时间。
+- SELECT NOW() FROM table_name;
+
+### `format()`
+##### FORMAT() 函数用于对字段的显示进行格式化
+- SELECT FORMAT(column_name,format) FROM table_name;
