@@ -137,14 +137,83 @@
 ##### 默认地，UNION 操作符选取不同的值。如果允许重复的值，请使用 UNION ALL。
 - SELECT column_name(s) FROM table1 UNION SELECT column_name(s) FROM table2;
 
+### `select into`
+##### SELECT INTO 语句从一个表复制数据，然后把数据插入到另一个新表中。
+- SELECT * INTO newtable [IN externaldb] FROM table1;
+- SELECT column_name(s) INTO newtable [IN externaldb] FROM table1;
 
+### `insert into select`
+##### INSERT INTO SELECT 语句从一个表复制数据，然后把数据插入到一个已存在的表中。
+- INSERT INTO table2 SELECT * FROM table1;
+- INSERT INTO table2 (column_name(s)) SELECT column_name(s) FROM table1;
 
+### `create database`
+##### CREATE DATABASE 语句用于创建数据库。
+- CREATE DATABASE dbname;
 
+### `create table`
+##### CREATE TABLE 语句用于创建数据库中的表。
+- CREATE TABLE table_name (column_name1 data_type(size),column_name2 data_type(size),column_name3 data_type(size),....);
 
+### `Constraints`
+#####  约束用于规定表中的数据规则。
+- CREATE TABLE table_name
+(
+column_name1 data_type(size) constraint_name,
+column_name2 data_type(size) constraint_name,
+column_name3 data_type(size) constraint_name,
+....
+);
 
+### `not null`
+##### NOT NULL 约束强制列不接受 NULL 值。
 
+### `unique`
+##### UNIQUE 约束唯一标识数据库表中的每条记录。
+##### UNIQUE 和 PRIMARY KEY 约束均为列或列集合提供了唯一性的保证。
+##### PRIMARY KEY 约束拥有自动定义的 UNIQUE 约束。
+##### 请注意，每个表可以有多个 UNIQUE 约束，但是每个表只能有一个 PRIMARY KEY 约束。
 
+### `primary key`
+##### PRIMARY KEY 约束唯一标识数据库表中的每条记录。
+##### 主键必须包含唯一的值。
+##### 主键列不能包含 NULL 值。
+##### 每个表都应该有一个主键，并且每个表只能有一个主键。
 
+### `foreign key`
+##### 一个表中的 FOREIGN KEY 指向另一个表中的 UNIQUE KEY(唯一约束的键)。
 
+### `check`
+##### CHECK 约束用于限制列中的值的范围。
+##### 如果对单个列定义 CHECK 约束，那么该列只允许特定的值。
+##### 如果对一个表定义 CHECK 约束，那么此约束会基于行中其他列的值在特定的列中对值进行限制。
 
+### `default`
+##### DEFAULT 约束用于向列中插入默认值。
 
+### `create index`
+##### CREATE INDEX 语句用于在表中创建索引。
+- CREATE INDEX index_name ON table_name (column_name);
+
+### `drop`
+##### 通过使用 DROP 语句，可以轻松地删除索引、表和数据库。
+
+### `alter`
+##### ALTER TABLE 语句用于在已有的表中添加、删除或修改列。
+
+### `auto increment`
+##### Auto-increment 会在新记录插入表中时生成一个唯一的数字。
+
+### `views`
+##### 在 SQL 中，视图是基于 SQL 语句的结果集的可视化的表。
+
+### `date`
+##### 当我们处理日期时，最难的任务恐怕是确保所插入的日期的格式，与数据库中日期列的格式相匹配。
+
+### `null`
+##### NULL 值代表遗漏的未知数据。
+- SELECT LastName,FirstName,Address FROM Persons WHERE Address IS NULL;
+- SELECT LastName,FirstName,Address FROM Persons WHERE Address IS NOT NULL;
+
+### `null函数`
+##### SQL ISNULL()、NVL()、IFNULL() 和 COALESCE() 函数
